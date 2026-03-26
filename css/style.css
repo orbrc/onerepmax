@@ -91,6 +91,8 @@ body h1, h2, h3, h4, h5, h6 {
 .button {
     background-color: var(--accent);
     padding: 7px 25px;
+    
+    font-family: 'JetBrains Mono' monospace;
 
     border: none;
     border-radius: 5px;
@@ -246,7 +248,7 @@ FOOTER STYLES
     left: 0px;
 
     margin-top: 40px;
-    height: 228px;
+    height: 250px;
 }
 
 .footer-elements {
