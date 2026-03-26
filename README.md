@@ -11,3 +11,5 @@ Instead of relying on a single formula, it enhances accuracy by:
 3. Averaging the result: The final output is the arithmetic mean (average) of these three calculations.
 
 This approach provides a more balanced and reliable estimate than any single formula alone, helping athletes and lifters accurately track their strength progress and plan their training loads.
+
+Link: orbrc.github.io/onerepmax
