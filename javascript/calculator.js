@@ -8,8 +8,6 @@ const closebtn = document.getElementById('closebtn');
 
 
 
-
-
 calcbtn.addEventListener('click', calculate);
 closebtn.addEventListener('click', hideMadal);
 document.addEventListener('keydown', (event) => {
@@ -21,10 +19,13 @@ document.addEventListener('keydown', (event) => {
 
 
 function calculate() {
-    const weight = Number(document.getElementById('weight-output').textContent);
-    const reps = Number(document.getElementById('reps-output').textContent)
+    const weight = Number(document.getElementById('weight-output').value);
+    const reps = Number(document.getElementById('reps-output').value);
 
     const result = (epley(weight, reps) + brzycki(weight, reps) + lander(weight, reps)) / 3;
+
+    console.log(weight);
+    console.log(reps);
 
     resultElem.textContent = `${Number(result).toFixed(1)}kg`
     showMadal();

@@ -199,11 +199,37 @@ MAIN CONTENT STYLES
     justify-content: space-between;
 }
 
+.slider-output {
+    background-color: var(--overlay);
+    color: var(--text);
+    border: none;
+    outline: none;
+}
+
+/* Для Chrome и Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Для IE и Edge */
+input[type="number"]::-ms-clear {
+  display: none;
+}
+
 .calculate {
     width: 100%;
     text-align: center;
     margin-top: 25px;
 }
+
+
 
 /*
 
