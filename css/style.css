@@ -1,0 +1,356 @@
+:root {
+    --background-mantle: rgb(30, 32, 48);
+    --base: rgb(36, 39, 58);
+    --overlay: #232638;
+    --base-transparent: rgba(36, 39, 58, 0.7);
+    
+    --surface0: rgb(54, 58, 79);
+    --surface1: rgb(73, 77, 100);
+    --surface2: rgb(91, 96, 120);
+
+    --text: rgb(202, 211, 245);
+    --subtext1: rgb(184, 192, 224);
+    --subtext0: rgb(165, 173, 203);
+
+    --accent: rgb(138, 173, 244);
+    --levander: rgb(183, 189, 248);
+    --green: rgb(166, 218, 149);
+    --yelow: rgb(238, 212, 159);
+    --red: rgb(237, 135, 150);
+    --meuve: rgb(198, 160, 246);
+}
+
+:root[theme="light"] {
+    --background-mantle: rgb(230, 233, 239);
+    --base: rgb(239, 241, 245);
+    --base-transparent: rgba(239, 241, 245, 0.7);
+    --overlay: rgb(220, 224, 232);
+
+
+    --surface0: rgb(204, 208, 218);
+    --surface1: rgb(204, 208, 218);
+    --surface2: rgb(188, 192, 204);
+
+    --text: rgb(76, 79, 105);
+    --subtext1: rgb(92, 95, 119);
+    --subtext0: rgb(108, 111, 133);
+
+    --accent: rgb(30, 102, 245);
+    --levander: rgb(114, 135, 253);
+    --green: rgb(64, 160, 43);
+    --yelow: rgb(223, 142, 29);
+    --red: rgb(210, 15, 57);
+    --meuve: rgb(136, 57, 239); 
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root:not(theme) {
+
+    --background-mantle: rgb(30, 32, 48);
+    --base: rgb(36, 39, 58);
+    --surface0: rgb(54, 58, 79);
+    --surface1: rgb(73, 77, 100);
+    --surface2: rgb(91, 96, 120);
+
+    --text: rgb(202, 211, 245);
+    --subtext1: rgb(184, 192, 224);
+    --subtext0: rgb(165, 173, 203);
+
+    --accent: rgb(138, 173, 244);
+    --green: rgb(166, 218, 149);
+    --yelow: rgb(238, 212, 159);
+    --red: rgb(237, 135, 150);
+    --meuve: rgb(198, 160, 246);
+    }
+}
+
+body {
+    background-color: var(--background-mantle);
+    color: var(--text);
+
+    margin: 0px 0px;
+    padding: 0px 0px;
+
+
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body p {
+   margin: 0; 
+   color: var(--subtext0);
+}
+
+body h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+.button {
+    background-color: var(--accent);
+    padding: 7px 25px;
+
+    border: none;
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+
+.button:hover {
+    cursor: pointer;
+
+    background-color: var(--levander);
+    transform: scaleY(1.1);
+}
+
+.button:active {
+    transform: scaleX(1.05);
+}
+
+/* 
+
+HEADER STYLES
+
+*/
+.header {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    position: fixed;
+
+    background-color: var(--base-transparent);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 2px 5px var(--base);
+
+    width: 100%;
+
+    z-index: 100;
+}
+
+.header-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1280px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.header-logo p {
+   margin: 0px; 
+}
+
+.header-logo-subtext {
+    font-size: 10px;
+}
+
+/* 
+
+MAIN CONTENT STYLES
+
+*/
+
+.content {
+    margin-top: 100px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.content-elements {
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1280px;
+}
+
+.calc {
+    margin-top: 40px;
+    background-color: var(--overlay);
+    padding: 20px;
+
+    border: 3px solid var(--accent);
+    border-radius: 10px;
+}
+
+.slider {
+    display: grid;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.slider-range {
+    accent-color: var(--accent);
+    flex: 0.9;
+    max-width: 80%;
+}
+
+.slider-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calculate {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/*
+
+FOOTER STYLES
+
+*/
+
+.footer {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+
+    margin-top: 40px;
+    height: 150px;
+}
+
+.footer-elements {
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1280px;
+}
+
+/*
+
+MADAL WINDOW
+
+*/
+
+.madal {
+    display: none;
+    padding: 20px;
+
+    z-index: 300;
+    overflow: scroll;
+
+    position: fixed;
+    background-color: var(--overlay);
+
+    border: 3px solid var(--accent);
+    border-radius: 15px;
+    
+    max-height: 90%;
+    max-width: 70%;
+
+    margin: 0px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.madal-elements {
+    text-align: center;
+}
+
+.madal-blur {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(10px);
+
+    z-index: 200;
+}
+
+.result {
+    margin-top: 20px;
+    color: var(--accent)
+}
+
+.closebtn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.madal.show {
+    display: block;
+    animation: fadeInTransf 0.3s ease forwards;
+}
+
+.madal-blur.show {
+    display: block;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/*
+
+MEDIA BLOCK
+
+*/
+
+@media (min-width: 1024px) {
+    .content-elements,
+    .header-elements,
+    .footer-elements {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media ((min-width: 640px) and (max-width: 1024px)) {
+    .content-elements,
+    .footer-elements,
+    .header-elements {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .content-elements,
+    .footer-elements,
+    .header-elements {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+/*
+
+ANIMATION
+
+*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTransf {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    } to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Rep Max Calculator</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="madal" class="madal">
+        <div class="madal-elements">
+
+            <h2>Результат</h2>
+            <p>Рассчета вашего 1ПМ</p>
+            
+            <p class="result" id="result">0</p>
+            
+            <button id="closebtn" class="closebtn button">
+                Закрыть
+            </button>
+        </div>
+    </div>
+    <div id="madal-blur" class="madal-blur"></div>
+
+    <div class="header">
+        <div class="header-elements">
+            <div class="header-logo">
+                <h3>Onerm</h3>
+                <p class="header-logo-subtext">calculator</p>
+            </div>
+            
+            <div class="header-buttons">
+                <button class="button" id="theme-toggle">
+                    Темная
+                </button>
+            </div>
+        </div>
+        <script src="javascript/theme.js"></script>
+    </div>
+
+    <div class="content">
+        <div class="content-elements">
+
+            <div class="content-header">
+                <h1>Калькулятор одноповторного максимума</h1>
+                <p>Быстро рассчитай свой одноповторный максимум в разных упражнениях в тренировочном зале.</p>
+            </div>
+
+            <div class="calc">
+                <div class="calc-info">
+                    <h2>Калькулятор</h2>
+                    <p>Введите нужные данные ниже</p>
+                </div>
+
+                <div class="slider" style="--value: 80.0;">
+                    <label class="slider-label" for="weight">
+                        Вес снаряда
+                    </label>
+
+                    <div class="slider-block">
+                        <input class="slider-range" type="range" id="weight" value="80.0" min="10.0" max="500.0" step="2.5">
+                        <output id="weight-output" class="slider-output">80.0</output>
+                    </div>
+                </div>
+
+                <div class="slider" style="--value: 10;">
+                    <label class="slider-label" for="weight">
+                        Повторы
+                    </label>
+
+                    <div class="slider-block">
+                        <input class="slider-range" type="range" id="reps" value="10" min="2" max="30" step="1">
+                        <output id="reps-output" class="slider-output">10</output>
+                    </div>
+                </div>
+
+                <button class="button calculate" id="calculate">
+                    Рассчитать
+                </button>
+
+                <script src="javascript/sliders.js"></script>
+            </div>
+
+        </div>
+    </div>
+    <script src="javascript/calculator.js"></script>
+
+    <div class="footer">
+        <div class="footer-elements">
+        
+            <div>
+                <h2>Тут могла быть ваша реклама</h2>
+                <p>Мой тг @chipza</p>
+            </div>
+        
+        </div>
+    </div>
+    
+</body>
+</html>
