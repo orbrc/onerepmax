@@ -204,6 +204,9 @@ MAIN CONTENT STYLES
     color: var(--text);
     border: none;
     outline: none;
+
+    font-family: 'JetBrains Mono' monospace;
+    font-weight: bold;
 }
 
 /* Для Chrome и Safari */
@@ -243,7 +246,7 @@ FOOTER STYLES
     left: 0px;
 
     margin-top: 40px;
-    height: 150px;
+    height: 228px;
 }
 
 .footer-elements {
@@ -251,6 +254,10 @@ FOOTER STYLES
     margin-right: auto;
 
     max-width: 1280px;
+}
+
+.footer-elements li {
+    color: var(--subtext0);
 }
 
 /*

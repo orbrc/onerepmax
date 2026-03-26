@@ -12,19 +12,30 @@ function initSlider(sliderContainer) {
         sliderContainer.style.setProperty('--value', value);
     }
 
+    let lastValid = rangeInput.value;
+
     rangeInput.addEventListener('input', (e) => {
         sync(e.target.value);
         console.log(e.target.value + " sync")
     });
 
-    numberInput.addEventListener('input', (e) => {
+    const normalizeAndSync = (e) => {
         let newValue = parseInt(e.target.value, 10);
 
-        if (isNaN(newValue)) newValue = e.target.min;
+        if (isNaN(newValue)) newValue = lastValid;
+        
         newValue = Math.min(rangeInput.max, Math.max(rangeInput.min, newValue));
         sync(newValue);
 
         console.log("sync " + newValue);
+        lastValid = newValue;
+    };
+
+    numberInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            normalizeAndSync(e);
+        }
     });
 
     sync(rangeInput.value);
